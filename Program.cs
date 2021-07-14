@@ -4,10 +4,10 @@ namespace Integracao
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var service = new org.oorsprong.webservices.CountryInfoService { Url = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL" };
-
+            var service = new org.oorsprong.webservices.CountryInfoService();
+                
             foreach (var country in service.ListOfCountryNamesByName())
             {
                 Console.WriteLine(country.sName.ToString());
